@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Desafios economicos en Argentina </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="descarga.jpeg">
+    <div id="comienzo">
+
+
+        <h1> Desafios economicos en Argentina </h1>
+    </div>
+</head>
+
+<body>
+
+    <header>
+
+
+        <nav>
+
+
+
+
+
+            <ul class="nav-menu">
+
+                <li><a class="CONTEXTO">CONTEXTO</a></li>
+                <li><a class="DESAFIOS">DESAFIOS PARA ARGENTINA</a></li>
+                <li><a class="SOLUCIONES">SOLUCIONES Y RESPUESTAS</a></li>
+
+
+            </ul>
+
+
+        </nav>
+
+
+
+    </header>
+
+
+    <section class="CONTEXTO">
+
+
+        <h2> CONTEXTO</h2>
+        <p> Argentina es uno de los países más grandes del mundo en territorio y un histórico productor de alimentos,
+            que en los últimos 20 años ha estado alternando períodos de crecimiento con fuertes crisis que afectaron a
+            su economía. En diciembre de 2001 estalló la crisis económica y política más importante de la historia
+            reciente de Argentina, en medio de una ola de protestas ante las restricciones a las extracciones de dinero
+            de los bancos impuestas por el gobierno, una medida conocida como "corralito".
+        </p>
+    </section>
+    <section class="DESAFIOS">
+        <h2> DESAFIOS Y SOLUCIONES</h2>
+        <H3>Inflación Alta </H3>
+        <p> Argentina ha lidiado con una inflación crónica, lo que reduce el poder adquisitivo de las personas,
+            especialmente aquellos con ingresos fijos. Los precios de bienes y servicios aumentan rápidamente, lo que
+            dificulta que los más pobres cubran sus necesidades básicas. </p>
+        <h3> Deuda Externa y Crisis Financiera</H3>
+        <p>La deuda externa del país y las crisis financieras recurrentes han llevado a medidas de austeridad,
+            devaluaciones y políticas económicas que pueden impactar de manera desproporcionada a los más pobres,
+            reduciendo los servicios públicos y los programas de bienestar social. </p>
+        <h3>Desempleo y Subempleo</h3>
+        <p> La falta de oportunidades de empleo formal puede afectar significativamente a las personas de bajos
+            ingresos. Muchos argentinos enfrentan el desempleo o trabajan en empleos informales con bajos salarios y
+            poca seguridad laboral.</p>
+        <h3>Desigualdad Social </h3>
+        <p>Argentina tiene una brecha de desigualdad significativa, con una distribución desigual de la riqueza y los
+            recursos. Esto significa que los beneficios del crecimiento económico a menudo no llegan a los sectores más
+            pobres de la sociedad.</p>
+        <h3>Acceso Limitado a Servicios Básicos </h3>
+        <p> Algunos grupos más pobres pueden tener dificultades para acceder a servicios básicos como educación de
+            calidad y atención médica, lo que perpetúa el ciclo de la pobreza.</p>
+
+
+
+    </section>
+    <section class="SOLUCIONES">
+        <h2>SOLUCIONES Y RESPUESTAS </h2>
+        <p>Para abordar estos desafíos, los gobiernos argentinos han implementado programas de asistencia social,
+            aumentos del salario mínimo y políticas orientadas a reducir la inflación. Sin embargo, la situación
+            económica y social en Argentina sigue siendo un tema complejo y en evolución, y las soluciones a largo plazo
+            requieren un enfoque integral y sostenible.</p>
+    </section>
+
+
+
+
+
+
+
+
+        <form id="miFormulario">
+            <h2>Formulario de Contacto</h2>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <br><br>
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="Apellido" name="Apellido" required>
+            <br><br>
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            <br><br>
+           
+            <label for="comentarios">Comentarios: ¿Qué opinás de nuestra página?</label>
+             <textarea id="comentarios" name="comentarios" rows="2" cols="25" required></textarea>
+            <br><br>
+            <label for="pais">País:</label>
+            <select id="pais" name="pais">
+                <option value="ARG">Argentina</option>
+                <option value="COL">Colombia</option>
+                <option value="VEN">Venezuela</option>
+            </select><br><br>
+            <label for="suscripcion">Suscribirse al boletín:</label>
+            <input type="checkbox" id="suscribir" name="suscribir" value="Sí">
+            <br><br>
+            <input type="button" value="Enviar" onclick="mostrarDatos()">
+            <input type="button" value="Limpiar" onclick="limpiarFormulario()">
+          </form>
+          <script>
+          function mostrarDatos() {
+            const nombre = document.getElementById("nombre").value;
+            const Apellido = document.getElementById("Apellido").value;
+            const correo = document.getElementById("email").value;
+            const comentarios = document.getElementById("comentarios").value;
+            const pais = document.getElementById("pais").value;
+            const suscripcion = document.getElementById("suscribir").checked ? "Sí" : "No";   
+            const mensaje = `Nombre: ${nombre}\nApellido: ${Apellido}\nCorreo: ${correo}\nComentarios: ${comentarios}\nPaís: ${pais}\nSuscripción: ${suscripcion}`;
+            alert(mensaje);
+          }
+          function limpiarFormulario() {
+            document.getElementById("miFormulario").reset();
+          }
+          </script>
+</body>
